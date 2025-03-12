@@ -11,7 +11,7 @@ class MenuViewTest(TestCase):
         self.client = APIClient()
 
     def test_getall(self):
-        response = self.client.get('/api/menu/')
+        response = self.client.get('/restaurant/menu/')
         data = response.json()
 
         self.assertEqual(len(data), 2)
